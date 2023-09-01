@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BookListContainer from './components/BookListContainer';
-import './App.css'; // Import the CSS file
+import Navigation from './components/navigation';
+import './App.css';
 
 function CategoriesPage() {
   return <h2>Categories Page Under Construction</h2>;
