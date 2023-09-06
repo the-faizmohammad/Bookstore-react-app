@@ -1,7 +1,11 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
-
-
-
-export default RemoveBookButton;
+function RemoveBookButton({ itemId }) {
+    const dispatch = useDispatch();
+  
+    const handleRemoveBook = () => {
+      dispatch(removeBook(itemId));
+    };
+  
+    return (
+      <button onClick={handleRemoveBook}>Remove Book</button>
+    );
+  }
