@@ -3,6 +3,7 @@ import booksReducer from './books/booksSlice';
 import categoriesReducer from './categories/categoriesSlice';
 
 const initialState = {
+    books: []
 };
 
 const store = configureStore({
