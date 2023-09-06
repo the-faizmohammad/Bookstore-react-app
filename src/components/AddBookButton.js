@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { addBook } from '../redux/books/booksSlice';
 
 function AddBookButton({ title, author }) {
@@ -17,11 +18,11 @@ function AddBookButton({ title, author }) {
   };
 
   return (
-<button type="button" onClick={handleAddBook}>Add Book</button>
+    <button type="button" onClick={handleAddBook}>Add Book</button>
   );
 }
 AddBookButton.propTypes = {
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
 };
 export default AddBookButton;

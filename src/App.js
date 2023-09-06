@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import BookList from './components/BookList';
-import BookForm from './components/BookForm';
 import Navigation from './components/navigation';
 import './styles/App.css';
 
@@ -21,7 +20,6 @@ function App() {
             <Route path="/" element={<BookList />} />
             <Route path="/categories" element={<CategoriesPage />} />
           </Routes>
-          <BookForm />
         </div>
       </Router>
     </Provider>

@@ -7,7 +7,10 @@ const BookForm = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ title, author });
+    // Check if onSubmit is a function before calling it
+    if (typeof onSubmit === 'function') {
+      onSubmit({ title, author });
+    }
     setTitle('');
     setAuthor('');
   };
@@ -34,9 +37,14 @@ const BookForm = ({ onSubmit }) => {
   );
 };
 
-// Add prop validation
+// Define PropTypes for the onSubmit prop
 BookForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func,
+};
+
+// Add defaultProps for onSubmit
+BookForm.defaultProps = {
+  onSubmit: null, // You can set a default value if needed
 };
 
 export default BookForm;
