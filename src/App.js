@@ -10,6 +10,7 @@ function CategoriesPage() {
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       <div className="App">
         <Navigation />
@@ -19,6 +20,8 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </Provider>
+
   );
 }
 
