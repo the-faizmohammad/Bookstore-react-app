@@ -20,5 +20,8 @@ function AddBookButton({ title, author }) {
     <button onClick={handleAddBook}>Add Book</button>
   );
 }
-
+AddBookButton.propTypes = {
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+};
 export default AddBookButton;
