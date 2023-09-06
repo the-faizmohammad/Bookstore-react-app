@@ -17,7 +17,7 @@ function AddBookButton({ title, author }) {
   };
 
   return (
-    <button onClick={handleAddBook}>Add Book</button>
+<button type="button" onClick={handleAddBook}>Add Book</button>
   );
 }
 AddBookButton.propTypes = {
