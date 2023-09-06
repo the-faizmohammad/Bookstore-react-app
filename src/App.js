@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux'; // Import Provider
+import store from './redux/store'; // Import your Redux store
 import BookListContainer from './components/BookListContainer';
 import Navigation from './components/navigation';
 import './styles/App.css';
@@ -10,15 +12,18 @@ function CategoriesPage() {
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<BookListContainer />} />
-          <Route path="/categories" element={<CategoriesPage />} />
-        </Routes>
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<BookListContainer />} />
+            <Route path="/categories" element={<CategoriesPage />} />
+          </Routes>
+        </div>
+      </Router>
+    </Provider>
+
   );
 }
 
