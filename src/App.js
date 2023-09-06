@@ -11,15 +11,15 @@ function CategoriesPage() {
 function App() {
   return (
     <Provider store={store}>
-    <Router>
-      <div className="App">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<BookListContainer />} />
-          <Route path="/categories" element={<CategoriesPage />} />
-        </Routes>
-      </div>
-    </Router>
+      <Router>
+        <div className="App">
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<BookListContainer />} />
+            <Route path="/categories" element={<CategoriesPage />} />
+          </Routes>
+        </div>
+      </Router>
     </Provider>
 
   );
