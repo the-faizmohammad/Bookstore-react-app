@@ -29,7 +29,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-## 📖 Math-Magicians is built using React
+## 📖 This BookStore App is built using React
 
 ## 🛠 Built With <a name="built-with">React</a>
 
