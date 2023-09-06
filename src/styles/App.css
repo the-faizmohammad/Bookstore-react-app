@@ -34,3 +34,58 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+.BookList {
+  margin-top: 20px;
+}
+
+.Book {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.BookForm {
+  margin-top: 20px;
+}
+
+.AddBookButton,
+.RemoveBookButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.AddBookButton:hover,
+.RemoveBookButton:hover {
+  background-color: #0056b3;
+}
+
+nav {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
