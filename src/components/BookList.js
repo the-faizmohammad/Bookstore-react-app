@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Book from './Book';
 import PropTypes from 'prop-types';
+import Book from './Book';
 
 function BookList() {
   const books = useSelector((state) => state.books);
@@ -22,7 +22,7 @@ BookList.propTypes = {
       title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
       category: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
 };
 export default BookList;
