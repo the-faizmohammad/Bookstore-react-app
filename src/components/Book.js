@@ -1,3 +1,4 @@
+// src/components/Book.js
 import React from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes
 import { useDispatch } from 'react-redux';
@@ -11,13 +12,13 @@ const Book = ({ book }) => {
   };
 
   return (
-    <div>
-      <h3>{book.title}</h3>
-      <p>
+    <div className="book-card">
+      <h3 className="book-title">{book.title}</h3>
+      <p className="book-author">
         Author:
         {book.author}
       </p>
-      <p>
+      <p className="book-category">
         Category:
         {book.category}
       </p>

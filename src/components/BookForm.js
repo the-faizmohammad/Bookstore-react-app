@@ -1,41 +1,44 @@
-import React from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { addBook } from '../redux/books/booksSlice';
 
-const Book = ({ book }) => {
+const BookForm = () => {
   const dispatch = useDispatch();
+  const [newBook, setNewBook] = useState({ title: '', author: '', category: '' });
 
-  const handleRemoveBook = () => {
-    dispatch(removeBook(book.item_id));
+  const handleAddBook = () => {
+    dispatch(addBook(newBook));
+    setNewBook({ title: '', author: '', category: '' });
   };
 
   return (
     <div>
-      <h3>{book.title}</h3>
-      <p>
-        Author:
-        {book.author}
-      </p>
-      <p>
-        Category:
-        {book.category}
-      </p>
-      <button type="button" onClick={handleRemoveBook}>
-        Remove
-      </button>
+      <h2>Add a New Book</h2>
+      <form>
+        <input
+          type="text"
+          placeholder="Title"
+          value={newBook.title}
+          onChange={(e) => setNewBook({ ...newBook, title: e.target.value })}
+        />
+        <input
+          type="text"
+          placeholder="Author"
+          value={newBook.author}
+          onChange={(e) => setNewBook({ ...newBook, author: e.target.value })}
+        />
+        <input
+          type="text"
+          placeholder="Category"
+          value={newBook.category}
+          onChange={(e) => setNewBook({ ...newBook, category: e.target.value })}
+        />
+        <button type="button" onClick={handleAddBook}>
+          Add Book
+        </button>
+      </form>
     </div>
   );
 };
 
-// Define PropTypes for the 'book' prop
-Book.propTypes = {
-  book: PropTypes.shape({
-    item_id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-  }).isRequired,
-};
-
-export default Book;
+export default BookForm;

@@ -1,3 +1,4 @@
+/* src/index.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -92,4 +93,48 @@ input[type="text"] {
   border-radius: 5px;
   width: 100%;
   font-size: 16px;
+}
+
+/* Book List Styling */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.book-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.book-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.book-author {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.book-category {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Book Form Styling */
+.book-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Button Colors */
+.book-form button {
+  background-color: #28a745; /* Green */
+}
+
+.book-form button:hover {
+  background-color: #1e7e34; /* Darker green on hover */
 }
