@@ -5,42 +5,43 @@ import { addBook } from '../redux/books/booksSlice';
 const BookForm = () => {
   const dispatch = useDispatch();
   const [newBook, setNewBook] = useState({ title: '', author: '', category: '' });
-  
+
   const handleInputChange = (e) => {
-  const { name, value } = e.target;
-  setNewBook({ ...newBook, [name]: value });
+    const { name, value } = e.target;
+    setNewBook({ ...newBook, [name]: value });
   };
+
   const handleAddBook = () => {
     dispatch(addBook(newBook));
+    // Clear the form after adding the book
     setNewBook({ title: '', author: '', category: '' });
   };
 
   return (
-    <div>
+    <div className="book-form">
       <h2>Add a New Book</h2>
-      <form>
-        <input
-          type="text"
-          placeholder="Title"
-          value={newBook.title}
-          onChange={(e) => setNewBook({ ...newBook, title: e.target.value })}
-        />
-        <input
-          type="text"
-          placeholder="Author"
-          value={newBook.author}
-          onChange={(e) => setNewBook({ ...newBook, author: e.target.value })}
-        />
-        <input
-          type="text"
-          placeholder="Category"
-          value={newBook.category}
-          onChange={(e) => setNewBook({ ...newBook, category: e.target.value })}
-        />
-        <button type="button" onClick={handleAddBook}>
-          Add Book
-        </button>
-      </form>
+      <input
+        type="text"
+        name="title"
+        placeholder="Title"
+        value={newBook.title}
+        onChange={handleInputChange}
+      />
+      <input
+        type="text"
+        name="author"
+        placeholder="Author"
+        value={newBook.author}
+        onChange={handleInputChange}
+      />
+      <input
+        type="text"
+        name="category"
+        placeholder="Category"
+        value={newBook.category}
+        onChange={handleInputChange}
+      />
+      <button onClick={handleAddBook}>Add Book</button>
     </div>
   );
 };
