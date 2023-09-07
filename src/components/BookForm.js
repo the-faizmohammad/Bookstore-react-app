@@ -5,7 +5,11 @@ import { addBook } from '../redux/books/booksSlice';
 const BookForm = () => {
   const dispatch = useDispatch();
   const [newBook, setNewBook] = useState({ title: '', author: '', category: '' });
-
+  
+  const handleInputChange = (e) => {
+  const { name, value } = e.target;
+  setNewBook({ ...newBook, [name]: value });
+  };
   const handleAddBook = () => {
     dispatch(addBook(newBook));
     setNewBook({ title: '', author: '', category: '' });
