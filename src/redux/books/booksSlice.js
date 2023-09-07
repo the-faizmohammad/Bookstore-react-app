@@ -6,6 +6,12 @@ const initialState = {
   status: 'idle',
   error: null,
 };
+export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
+  const response = await axios.get(
+    'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/sZfsUrZIdaGOBVYN2H6F/books'
+  );
+  return response.data;
+});
 
 const booksSlice = createSlice({
   name: 'books',
