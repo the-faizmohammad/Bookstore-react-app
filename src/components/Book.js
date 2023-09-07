@@ -1,29 +1,41 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'; // Import PropTypes
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
 
-const Book = ({ book, onDelete }) => (
-  <div>
-    {book && (
-      <div>
-        <p>{book.title}</p>
-        <p>{book.author}</p>
-        <button type="button" onClick={() => onDelete(book.item_id)}>Delete</button>
-      </div>
-    )}
-  </div>
-);
+const Book = ({ book }) => {
+  const dispatch = useDispatch();
 
-Book.propTypes = {
-  book: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    item_id: PropTypes.string.isRequired, // Update to 'item_id'
-  }),
-  onDelete: PropTypes.func.isRequired,
+  const handleRemoveBook = () => {
+    dispatch(removeBook(book.item_id));
+  };
+
+  return (
+    <div>
+      <h3>{book.title}</h3>
+      <p>
+        Author:
+        {book.author}
+      </p>
+      <p>
+        Category:
+        {book.category}
+      </p>
+      <button type="button" onClick={handleRemoveBook}>
+        Remove
+      </button>
+    </div>
+  );
 };
 
-Book.defaultProps = {
-  book: null,
+// Define PropTypes for the 'book' prop
+Book.propTypes = {
+  book: PropTypes.shape({
+    item_id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Book;
