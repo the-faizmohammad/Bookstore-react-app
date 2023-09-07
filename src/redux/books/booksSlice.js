@@ -12,7 +12,6 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   );
   return response.data;
 });
-// Define an async thunk for adding a book to the API
 export const addBook = createAsyncThunk('books/addBook', async (bookData) => {
   const response = await axios.post(
     'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/sZfsUrZIdaGOBVYN2H6F/books',
@@ -20,6 +19,13 @@ export const addBook = createAsyncThunk('books/addBook', async (bookData) => {
   );
   return response.data;
 });
+export const removeBook = createAsyncThunk('books/removeBook', async (item_id) => {
+  await axios.delete(
+    `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/sZfsUrZIdaGOBVYN2H6F/books/${item_id}`
+  );
+  return item_id;
+});
+
 const booksSlice = createSlice({
   name: 'books',
   initialState,
