@@ -1,28 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './redux/store';
-import BookList from './components/BookList';
-import Navigation from './components/navigation';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Categories from './components/Categories';
+import Navigation from './components/NavigationBar';
 import './styles/App.css';
-
-function CategoriesPage() {
-  return <h2>Categories Page Under Construction</h2>;
-}
 
 function App() {
   return (
-    <Provider store={store}>
-      <Router>
-        <div className="App">
-          <Navigation />
-          <Routes>
-            <Route path="/" element={<BookList />} />
-            <Route path="/categories" element={<CategoriesPage />} />
-          </Routes>
-        </div>
-      </Router>
-    </Provider>
+    <div>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
+    </div>
   );
 }
 
