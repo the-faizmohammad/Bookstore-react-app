@@ -1,42 +1,44 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
 
-const BookForm = ({ onSubmit }) => {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+const BookForm = () => {
+  const dispatch = useDispatch();
+  const [newBook, setNewBook] = useState({ title: '', author: '', category: '' });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit({ title, author });
-    setTitle('');
-    setAuthor('');
+  const handleAddBook = () => {
+    dispatch(addBook(newBook));
+    setNewBook({ title: '', author: '', category: '' });
   };
 
   return (
     <div>
       <h2>Add a New Book</h2>
-      <form onSubmit={handleSubmit}>
+      <form>
         <input
           type="text"
           placeholder="Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value={newBook.title}
+          onChange={(e) => setNewBook({ ...newBook, title: e.target.value })}
         />
         <input
           type="text"
           placeholder="Author"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
+          value={newBook.author}
+          onChange={(e) => setNewBook({ ...newBook, author: e.target.value })}
         />
-        <button type="submit">Add</button>
+        <input
+          type="text"
+          placeholder="Category"
+          value={newBook.category}
+          onChange={(e) => setNewBook({ ...newBook, category: e.target.value })}
+        />
+        <button type="button" onClick={handleAddBook}>
+          Add Book
+        </button>
       </form>
     </div>
   );
-};
-
-// Add prop validation
-BookForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
 };
 
 export default BookForm;
