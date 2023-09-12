@@ -8,7 +8,6 @@ const Book = ({ book }) => {
   const dispatch = useDispatch();
 
   const handleRemoveBook = () => {
-    // Dispatch the removeBook action with the item_id of the book to be removed
     dispatch(removeBook(book.item_id));
   };
 
