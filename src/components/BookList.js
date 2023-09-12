@@ -1,17 +1,18 @@
-// src/components/BookList.js
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchBooks } from '../redux/books/booksSlice';
 import Book from './Book';
 
 const BookList = () => {
-  // Assuming you have a books slice in your Redux state
-  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.books || []);
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
   return (
     <div className="book-list">
-      {books.map((book) => (
-        // Ensure that 'book' object has required properties
-        // and provide a unique 'key' prop
+      {Array.from(books).map((book) => (
         <Book key={book.item_id} book={book} />
       ))}
     </div>

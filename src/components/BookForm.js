@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
 
 const BookForm = () => {
   const dispatch = useDispatch();
   const [newBook, setNewBook] = useState({ title: '', author: '', category: '' });
 
-  const handleAddBook = () => {
-    dispatch(addBook(newBook));
-    setNewBook({ title: '', author: '', category: '' });
+  const handleAddBook = async () => {
+    try {
+      const newItemId = uuidv4();
+      const newBookWithId = { item_id: newItemId, ...newBook };
+
+      dispatch(addBook(newBookWithId));
+      setNewBook({ title: '', author: '', category: '' });
+    } catch (error) {
+      //
+    }
   };
 
   return (
