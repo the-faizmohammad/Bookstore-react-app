@@ -9,12 +9,10 @@ const BookForm = () => {
 
   const handleAddBook = async () => {
     try {
-      const newItemId = uuidv4(); // Generate a new UUID
+      const newItemId = uuidv4();
       const newBookWithId = { item_id: newItemId, ...newBook };
 
       dispatch(addBook(newBookWithId));
-
-      // Clear the form fields
       setNewBook({ title: '', author: '', category: '' });
     } catch (error) {
       //
