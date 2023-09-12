@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => (
   <nav>
-      <h1 className="logo">Bookstore CMS</h1>
+    <h1 className="logo">Bookstore CMS</h1>
     <ul className="navigation-links">
       <li className="nav-link">
         <Link to="/">BOOKS</Link>
