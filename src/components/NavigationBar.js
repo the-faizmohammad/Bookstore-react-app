@@ -3,14 +3,18 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => (
   <nav>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
+      <h1 className="logo">Bookstore CMS</h1>
+    <ul className="navigation-links">
+      <li className="nav-link">
+        <Link to="/">BOOKS</Link>
       </li>
-      <li>
-        <Link to="/categories">Categories</Link>
+      <li className="nav-link">
+        <Link to="/categories">CATEGORIES</Link>
       </li>
     </ul>
+    <div className="user-icon">
+      Icon
+    </div>
   </nav>
 );
 
