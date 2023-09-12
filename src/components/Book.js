@@ -1,13 +1,14 @@
-// src/components/Book.js
+// Book.js
 import React from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { removeBook } from '../redux/books/booksSlice'; // Assuming you have this action
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
 
   const handleRemoveBook = () => {
+    // Dispatch the removeBook action with the item_id of the book to be removed
     dispatch(removeBook(book.item_id));
   };
 
@@ -29,7 +30,6 @@ const Book = ({ book }) => {
   );
 };
 
-// Define PropTypes for the 'book' prop
 Book.propTypes = {
   book: PropTypes.shape({
     item_id: PropTypes.string.isRequired,
