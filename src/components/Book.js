@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice'; // Assuming you have this action
+import ProgressBar from './ProgressBar';
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
@@ -25,6 +26,9 @@ const Book = ({ book }) => {
       <button type="button" onClick={handleRemoveBook}>
         Remove
       </button>
+      <div className="second-part">
+        <ProgressBar />
+      </div>
     </div>
   );
 };
