@@ -1,0 +1,26 @@
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .progress-wrap {
+    display: flex;
+    gap: 0.61rem;
+    width: 50%;
+  }
+  
+  .progressbar {
+    width: 4.25rem;
+  }
+  
+  .completed-action,
+  .progress-status,
+  .text-content p,
+  h4 {
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+  }
+  
+  
