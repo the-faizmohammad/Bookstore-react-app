@@ -6,7 +6,7 @@
   
   .progress-wrap {
     display: flex;
-    gap: 0.61rem;
+    gap: 0.62rem;
     width: 50%;
   }
   
@@ -17,7 +17,7 @@
   .completed-action,
   .progress-status,
   .text-content p,
-  h4 {
+  h3 {
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -27,7 +27,7 @@
   .completed-action {
     font-weight: normal;
     letter-spacing: normal;
-    color: var(--black-two);
+    color: #121212;
   }
   
   .progress-status {
@@ -40,7 +40,7 @@
   }
   
   .current-chapter{
-    border-left: 1px solid var(--white-three);
+    border-left: 1px solid #e8e8e8;
   }
   
   .current-chapter p {
@@ -50,15 +50,15 @@
     font-size: 0.813rem;
     font-weight: 300;
     letter-spacing: normal;
-    color: var(--black-two);
+    color: var#121212;
   }
   
-  h4 {
+  h3 {
     margin: 0.438rem 6.813rem 0.25rem 3.688rem;
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: -0.4px;
-    color: var(--black-two);
+    color: #121212;
   }
   
   .update-progress {
