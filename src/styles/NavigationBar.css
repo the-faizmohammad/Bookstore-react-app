@@ -5,10 +5,6 @@
   padding: 0;
 }
 
-a {
-  color: inherit;
-}
-
 body {
   padding: 4%;
   background-color: #f5f6fa;
@@ -73,22 +69,7 @@ a {
   border-radius: 50%;
   border: solid 1px #e8e8e8;
   background-color: white;
-  color:#0290ff ;
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
+  color: #0290ff;
 }
 
 .container {
