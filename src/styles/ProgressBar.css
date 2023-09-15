@@ -1,0 +1,93 @@
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 1.313rem;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circular-progress-container {
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-progress {
+  position: absolute;
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+.progress-divider {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0 3.688rem 0 4.938rem;
+  background-color: #e8e8e8;
+  color: black;
+}
+
+.percent-complete {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.current-chapter-container {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+  gap: 1px;
+  width: 14rem;
+}
+
+.current-chapter-label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-size: 0.813rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.current-chapter {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  margin-top: 0.438rem;
+  font-size: 1rem;
+  color: #121212;
+  letter-spacing: -0.4px;
+}
+
+.completed {
+  font-family: "Montserrat", sans-serif;
+  font-size: 00.875rem;
+  opacity: 0.5;
+  color: #121212;
+}
+
+.horizontal-divider {
+  height: 0.125rem;
+  background-color: #e8e8e8;
+  width: 100%;
+  margin: 2.5rem 0 1.813rem;
+}
+
+.primary-button {
+  cursor: pointer;
+  border: none;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 8px 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #fff;
+}

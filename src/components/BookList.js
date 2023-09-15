@@ -11,7 +11,7 @@ const BookList = () => {
   }, [dispatch]);
 
   return (
-    <div className="book-list">
+    <div className="container">
       {Array.from(books).map((book) => (
         <Book key={book.item_id} book={book} />
       ))}
