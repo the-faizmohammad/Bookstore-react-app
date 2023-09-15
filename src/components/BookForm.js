@@ -20,27 +20,23 @@ const BookForm = () => {
   };
 
   return (
-    <section>
+    <section className="form-container">
       <h2 className="form-title">ADD NEW BOOK</h2>
       <form className="add-form">
-        <label htmlFor="book-name">
-          <input
-            className="input title-input"
-            type="text"
-            placeholder="Title"
-            value={newBook.title}
-            onChange={(e) => setNewBook({ ...newBook, title: e.target.value })}
-          />
-        </label>
-        <label htmlFor="book-author">
-          <input
-            className="input tittle-input"
-            type="text"
-            placeholder="Author"
-            value={newBook.author}
-            onChange={(e) => setNewBook({ ...newBook, author: e.target.value })}
-          />
-        </label>
+        <input
+          className="input title-input"
+          type="text"
+          placeholder="Title"
+          value={newBook.title}
+          onChange={(e) => setNewBook({ ...newBook, title: e.target.value })}
+        />
+        <input
+          className="input title-input"
+          type="text"
+          placeholder="Author"
+          value={newBook.author}
+          onChange={(e) => setNewBook({ ...newBook, author: e.target.value })}
+        />
         <button type="submit" className="primary-button-big" onClick={handleAddBook}>
           Add Book
         </button>

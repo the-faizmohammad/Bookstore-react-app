@@ -114,11 +114,7 @@
 }
 
 .title-input {
-  width: 50%;
-}
-
-.category-input {
-  width: 30%;
+  width: 40%;
 }
 
 .primary-button-big {
@@ -134,3 +130,4 @@
   font-weight: bold;
   font-family: "Roboto Slab", serif;
 }
+
