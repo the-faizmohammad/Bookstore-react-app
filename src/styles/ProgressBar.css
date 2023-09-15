@@ -35,13 +35,43 @@
     color: black;
 }
 
-.current-chapter-container {
+.percent-complete {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    color: #121212;
+  }
+  
+  .current-chapter-container {
     display: flex;
     flex-direction: column;
     grid-gap: 20px;
-    gap: 20px;
+    gap: 1px;
     width: 14rem;
 }
+  
+  .current-chapter-label {
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    font-size: 0.813rem;
+    color: #121212;
+    opacity: 0.5;
+  }
+  
+  .current-chapter {
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    margin-top: 0.438rem;
+    font-size: 1rem;
+    color: #121212;
+    letter-spacing: -0.4px;
+  }
+
+  .completed {
+    font-family: "Montserrat", sans-serif;
+    font-size: 00.875rem;
+    opacity: 0.5;
+    color: #121212;
+  }
 
 .horizontal-divider {
     height: 0.125rem;
