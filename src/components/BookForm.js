@@ -20,46 +20,32 @@ const BookForm = () => {
   };
 
   return (
-    <div className="add-book-form">
-      <h2>Add a New Book</h2>
-      <form>
-        <div className="form-parts">
-          <label htmlFor="book-name">
-            <input
-              type="text"
-              placeholder="Title"
-              value={newBook.title}
-              onChange={(e) => setNewBook({ ...newBook, title: e.target.value })}
-            />
-          </label>
-        </div>
-        <div className="form-parts">
-          <label htmlFor="book-author">
-            <input
-              type="text"
-              placeholder="Author"
-              value={newBook.author}
-              onChange={(e) => setNewBook({ ...newBook, author: e.target.value })}
-            />
-          </label>
-        </div>
-        <div className="form-parts">
-          <label htmlFor="book-category">
-            <input
-              type="text"
-              placeholder="Category"
-              value={newBook.category}
-              onChange={(e) => setNewBook({ ...newBook, category: e.target.value })}
-            />
-          </label>
-        </div>
-        <div className="form-parts">
-          <button type="button" className="add-book" onClick={handleAddBook}>
-            Add Book
-          </button>
-        </div>
+    <section>
+      <h2 className="form-title">ADD NEW BOOK</h2>
+      <form className="add-form">
+        <label htmlFor="book-name">
+          <input
+            className="input title-input"
+            type="text"
+            placeholder="Title"
+            value={newBook.title}
+            onChange={(e) => setNewBook({ ...newBook, title: e.target.value })}
+          />
+        </label>
+        <label htmlFor="book-author">
+          <input
+            className="input tittle-input"
+            type="text"
+            placeholder="Author"
+            value={newBook.author}
+            onChange={(e) => setNewBook({ ...newBook, author: e.target.value })}
+          />
+        </label>
+        <button type="submit" className="primary-button-big" onClick={handleAddBook}>
+          Add Book
+        </button>
       </form>
-    </div>
+    </section>
   );
 };
 
