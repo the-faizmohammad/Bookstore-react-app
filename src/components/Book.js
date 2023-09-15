@@ -13,7 +13,7 @@ const Book = ({ book }) => {
   };
 
   return (
-    <div className="container">
+    <div>
       <ul className="books">
         <li>
           <div className="book">
@@ -47,8 +47,8 @@ const Book = ({ book }) => {
                     Edit
                   </button>
                 </div>
-                <ProgressBar />
               </div>
+              <ProgressBar />
             </div>
           </div>
         </li>
