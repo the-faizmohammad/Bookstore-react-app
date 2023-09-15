@@ -6,24 +6,26 @@ const ProgressBar = () => {
   const value = 0.67;
   return (
     <div className="progress-container">
-      <div className="progress-wrap">
-        <div className="progressbar">
+      <div className="circular-progress-container">
+        <div className="circular-progress">
           <CircularProgressbar value={value} maxValue={1} />
         </div>
-        <p className="progress-status">
-          {`${value * 100}%`}
-          {' '}
-          <br />
-          <span className="completed-action">Completed</span>
-        </p>
-      </div>
-      <div className="current-chapter">
-        <p>CURRENT CHAPTER</p>
-        <h3>
-          Chapter
-          {` ${value}`}
-        </h3>
-        <button type="button" className="update-progress">UPDATE PROGRESS</button>
+        <div className="progress-stat">
+          <p className="percent-complete">{`${value * 100}%`}</p>
+          <p className="completed">Completed</p>
+        </div>
+        <div className="progress-divider" />
+        <div className="current-chapter-container">
+          <div>
+            <p className="current-chapter-label">CURRENT CHAPTER</p>
+            <p className="current-chapter">
+              Chapter 17
+            </p>
+            <button type="button" className="primary-button">
+              UPDATE PROGRESS
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

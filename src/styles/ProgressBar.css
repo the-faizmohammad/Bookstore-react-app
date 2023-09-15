@@ -1,72 +1,62 @@
-.progress-container {
+
+  .action-buttons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-top: 1.313rem;
   }
-  
-  .progress-wrap {
+
+  .progress-container {
     display: flex;
-    gap: 0.62rem;
-    width: 50%;
+    align-items: center;
   }
-  
-  .progressbar {
+ 
+  .circular-progress-container {
+    width: 5.625rem;
+    height: 5.625rem;
+    padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circular-progress {
+    position: absolute;
+    border-radius: 50%;
     width: 4.25rem;
+    height: 4.25rem;
   }
-  
-  .completed-action,
-  .progress-status,
-  .text-content p,
-  h3 {
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-  }
-  
-  .progress-status,
-  .completed-action {
-    font-weight: normal;
-    letter-spacing: normal;
-    color: #121212;
-  }
-  
-  .progress-status {
-    font-size: 2rem;
-  }
-  
-  .completed-action {
-    opacity: 0.5;
-    font-size: 0.875rem;
-  }
-  
-  .current-chapter{
-    border-left: 1px solid #e8e8e8;
-  }
-  
-  .current-chapter p {
-    margin: 0.438rem 6.813rem 0.25rem 3.688rem;
-    opacity: 0.5;
-    font-family: 'RobotoSlab', sans-serif;
-    font-size: 0.813rem;
-    font-weight: 300;
-    letter-spacing: normal;
-    color: var#121212;
-  }
-  
-  h3 {
-    margin: 0.438rem 6.813rem 0.25rem 3.688rem;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: -0.4px;
-    color: #121212;
-  }
-  
-  .update-progress {
-    margin: 0.75rem 0 0.563rem 3.688rem;
-    padding: 0.438rem 1.188rem 0.5rem 1.375rem;
-    border-radius: 3px;
-    background-color: #0290ff;
-    color: #fff;
+
+  .progress-divider {
+    width: 0.125rem;
+    height: 4.375rem;
+    margin: 0 3.688rem 0 4.938rem;
+    background-color: #e8e8e8;
+    color: black;
+}
+
+.current-chapter-container {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    gap: 20px;
+    width: 14rem;
+}
+
+.horizontal-divider {
+    height: 0.125rem;
+    background-color: #e8e8e8;
+    width: 100%;
+    margin: 2.5rem 0 1.813rem;
+}
+
+.primary-button {
+    cursor: pointer;
     border: none;
-    outline: none;
-  }
+    background-color: #0290ff;
+    border-radius: 3px;
+    padding: 8px 24px;
+    font-family: "Roboto Slab",serif;
+    font-weight: 300;
+    letter-spacing: .5px;
+    color: #fff;
+}
